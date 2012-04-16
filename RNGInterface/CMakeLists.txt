@@ -1,0 +1,1 @@
+install( FILES RNGInterface.hpp DESTINATION include )
