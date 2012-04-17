@@ -34,9 +34,7 @@ double Ran32::uniGen( double min, \
 	try {
 		checkMinMax( min, max );
 	} catch( std::runtime_error & e ) {
-		std::cout << std::endl << e.what() << std::endl;
-
-		return -1.0;
+		throw;
 	}
 
 	return min + doub() * ( max - min );
@@ -80,5 +78,5 @@ double Ran32::trueDoub() {
 void Ran32::checkMinMax( double min, \
 						 double max ) {
 	if ( min >= max )
-		throw std::runtime_error( "min >= max" );
+		throw std::runtime_error( "Exception: min >= max" );
 }

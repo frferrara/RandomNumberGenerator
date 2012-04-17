@@ -23,9 +23,11 @@ RandomNumberGenerator::~RandomNumberGenerator() {
 
 double RandomNumberGenerator::uniGen( double min, \
 						   	  	  	  double max ) {
-	double num = randNumGen->uniGen( min, max );
+	double num = 0.0;
 
 	try {
+		num = randNumGen->uniGen( min, max );
+
 		checkNum_uniGen( num, min, max );
 	} catch( std::runtime_error & e ) {
 		std::cout << std::endl << e.what() << std::endl;
@@ -37,9 +39,11 @@ double RandomNumberGenerator::uniGen( double min, \
 
 double RandomNumberGenerator::normGen( double mu, \
 							   	   	   double sigma ) {
-	double num = randNumGen->normGen( mu, sigma );
+	double num = 0.0;
 
 	try {
+		num = randNumGen->normGen( mu, sigma );
+
 		checkNum_normGen( num, mu, sigma );
 	} catch (std::runtime_error & e) {
 		std::cout << std::endl << e.what() << std::endl;
@@ -56,7 +60,7 @@ void RandomNumberGenerator::checkNum_uniGen( double num, \
 		num = randNumGen->uniGen( min, max );
 
 	if ( num == 0.0 )
-		throw std::runtime_error( "Wrong random number generator!" );
+		throw std::runtime_error( "Exception: Wrong random number generator!" );
 }
 
 void RandomNumberGenerator::checkNum_normGen( double num, \
@@ -66,5 +70,5 @@ void RandomNumberGenerator::checkNum_normGen( double num, \
 		num = randNumGen->normGen( mu, sigma );
 
 	if ( num == 0.0 )
-		throw std::runtime_error( "Wrong random number generator!" );
+		throw std::runtime_error( "Exception: Wrong random number generator!" );
 }
