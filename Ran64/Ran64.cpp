@@ -36,6 +36,11 @@ double Ran64::uniGen( double min, \
 	return min + doub() * ( max - min );
 }
 
+double Ran64::normGen( double mu, \
+					   double sigma ) {
+	return 0.0;
+}
+
 unsigned long long Ran64::int64() {
 	u = u * 2862933555777941757LL + 7046029254386353087LL;
 

@@ -24,6 +24,11 @@ Marsaglia64::~Marsaglia64() {
 	delete ran64;
 }
 
+double Marsaglia64::uniGen( double min, \
+							double max ) {
+	return 0.0;
+}
+
 double Marsaglia64::normGen( double mu, \
 							 double sigma ) {
 	return dev( mu, sigma );

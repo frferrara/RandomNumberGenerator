@@ -21,8 +21,11 @@ public:
 
 	~Marsaglia32();
 
-	double normGen( double mu, \
-					double sigma );
+	virtual double uniGen( double min, \
+						   double max );
+
+	virtual double normGen( double mu, \
+							double sigma );
 
 private:
 	double dev( double mu, \

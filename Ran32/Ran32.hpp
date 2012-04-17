@@ -20,10 +20,13 @@ public:
 
 	Ran32( unsigned int i );
 
-	~Ran32() {}
+	virtual ~Ran32() {}
 
-	double uniGen( double min, \
-				   double max );
+	virtual double uniGen( double min, \
+				    	   double max );
+
+	virtual double normGen( double mu, \
+							double sigma );
 
 private:
 	inline unsigned int int32();

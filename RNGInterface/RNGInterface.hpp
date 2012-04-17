@@ -14,14 +14,10 @@ public:
 	virtual ~RNGInterface() {}
 
 	virtual double uniGen( double min, \
-						   double max ) {
-		return 0.0;
-	}
+						   double max ) = 0;
 
 	virtual double normGen( double mu, \
-							double sigma ) {
-		return 0.0;
-	}
+							double sigma ) = 0;
 
 protected:
 	RNGInterface() {}

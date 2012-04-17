@@ -24,6 +24,11 @@ Marsaglia32::~Marsaglia32() {
 	delete ran32;
 }
 
+double Marsaglia32::uniGen( double min, \
+							double max ) {
+	return 0.0;
+}
+
 double Marsaglia32::normGen( double mu, \
 							 double sigma ) {
 	return dev( mu, sigma );

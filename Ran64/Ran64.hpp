@@ -22,8 +22,11 @@ public:
 
 	~Ran64() {}
 
-	double uniGen( double min, \
-				   double max );
+	virtual double uniGen( double min, \
+						   double max );
+
+	virtual double normGen( double mu, \
+							double sigma );
 
 private:
 	inline unsigned long long int64();

@@ -42,6 +42,11 @@ double Ran32::uniGen( double min, \
 	return min + doub() * ( max - min );
 }
 
+double Ran32::normGen( double mu, \
+					   double sigma ) {
+	return 0.0;
+}
+
 unsigned int Ran32::int32() {
 	u = u * 2891336453U + 1640531513U;
 
