@@ -42,7 +42,7 @@ double Ran32::uniGen( double min, \
 
 double Ran32::normGen( double mu, \
 					   double sigma ) {
-	return 0.0;
+	throw std::runtime_error( "Exception: Wrong random number generator!" );
 }
 
 unsigned int Ran32::int32() {

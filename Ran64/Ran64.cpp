@@ -36,7 +36,7 @@ double Ran64::uniGen( double min, \
 
 double Ran64::normGen( double mu, \
 					   double sigma ) {
-	return 0.0;
+	throw std::runtime_error( "Exception: Wrong random number generator!" );
 }
 
 unsigned long long Ran64::int64() {

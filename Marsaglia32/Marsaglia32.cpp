@@ -26,7 +26,7 @@ Marsaglia32::~Marsaglia32() {
 
 double Marsaglia32::uniGen( double min, \
 							double max ) {
-	return 0.0;
+	throw std::runtime_error( "Exception: Wrong random number generator!" );
 }
 
 double Marsaglia32::normGen( double mu, \
