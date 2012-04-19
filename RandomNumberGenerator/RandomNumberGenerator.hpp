@@ -31,14 +31,6 @@ public:
 				    double sigma );
 
 private:
-	void checkNum_uniGen( double num, \
-						  double min, \
-						  double max );
-
-	void checkNum_normGen( double num, \
-						   double mu, \
-						   double sigma );
-
 	RNGInterface * randNumGen;
 };
 

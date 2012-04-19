@@ -27,12 +27,8 @@ double RandomNumberGenerator::uniGen( double min, \
 
 	try {
 		num = randNumGen->uniGen( min, max );
-
-		checkNum_uniGen( num, min, max );
 	} catch( std::runtime_error & e ) {
 		std::cout << std::endl << e.what() << std::endl;
-
-		return 0.0;
 	}
 	return num;
 }
@@ -43,32 +39,9 @@ double RandomNumberGenerator::normGen( double mu, \
 
 	try {
 		num = randNumGen->normGen( mu, sigma );
-
-		checkNum_normGen( num, mu, sigma );
 	} catch (std::runtime_error & e) {
 		std::cout << std::endl << e.what() << std::endl;
-
-		return 0.0;
 	}
+
 	return num;
-}
-
-void RandomNumberGenerator::checkNum_uniGen( double num, \
-											 double min, \
-											 double max ) {
-	if ( num == 0.0 )
-		num = randNumGen->uniGen( min, max );
-
-	if ( num == 0.0 )
-		throw std::runtime_error( "Exception: Wrong random number generator!" );
-}
-
-void RandomNumberGenerator::checkNum_normGen( double num, \
-											  double mu, \
-											  double sigma ) {
-	if ( num == 0.0 )
-		num = randNumGen->normGen( mu, sigma );
-
-	if ( num == 0.0 )
-		throw std::runtime_error( "Exception: Wrong random number generator!" );
 }
