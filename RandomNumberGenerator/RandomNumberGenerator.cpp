@@ -23,24 +23,24 @@ RandomNumberGenerator::~RandomNumberGenerator() {
 
 double RandomNumberGenerator::uniGen( double min, \
 						   	  	  	  double max ) {
-	double num = 0.0;
-
 	try {
 		num = randNumGen->uniGen( min, max );
 	} catch( std::runtime_error & e ) {
 		std::cout << std::endl << e.what() << std::endl;
+
+		num = 0.0;
 	}
 	return num;
 }
 
 double RandomNumberGenerator::normGen( double mu, \
 							   	   	   double sigma ) {
-	double num = 0.0;
-
 	try {
 		num = randNumGen->normGen( mu, sigma );
 	} catch (std::runtime_error & e) {
 		std::cout << std::endl << e.what() << std::endl;
+
+		num = 0.0;
 	}
 
 	return num;

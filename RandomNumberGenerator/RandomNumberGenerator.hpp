@@ -32,6 +32,8 @@ public:
 
 private:
 	RNGInterface * randNumGen;
+
+	double num;
 };
 
 
