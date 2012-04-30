@@ -2,9 +2,9 @@ cmake_minimum_required( VERSION 2.8 )
 
 project( RandNumGen )
 
-set( CMAKE_BUILD_TYPE "Release" )
+set( CMAKE_BUILD_TYPE "Debug" )
 
-set( CMAKE_CXX_FLAGS_DEBUG "-W -Wextra -g" )
+set( CMAKE_CXX_FLAGS_DEBUG "-W -Wextra -g -O0" )
 set( CMAKE_CXX_FLAGS_RELEASE "" )
 
 include_directories( ${PROJECT_SOURCE_DIR}/RNGInterface
