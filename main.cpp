@@ -10,7 +10,7 @@
 #include "RandomNumberGenerator.hpp"
 
 
-int main( int argc, char * argv[] ) {
+int main() {
 
 	std::cout << "32 bit UNIFORM (min = 0.5, max = 4.5)\n" <<
 				 "-------------------------------------\n";
@@ -37,6 +37,8 @@ int main( int argc, char * argv[] ) {
 	std::cout << "64 bit UNIFORM (min = 0.5, max = 4.5)\n" <<
 				 "-------------------------------------\n";
 
+	delete randNumGen;
+
 	randNumGen = new RandomNumberGenerator( new Ran64( 70 ) );
 
 	for ( int i = 0; i < 10; i++ ) {
@@ -54,6 +56,8 @@ int main( int argc, char * argv[] ) {
 	std::cout << "32 bit NORMAL (mu = 0.5, sigma = 4.5)\n" <<
 				 "-------------------------------------\n";
 
+	delete randNumGen;
+
 	randNumGen = new RandomNumberGenerator( new Marsaglia32( 120 ) );
 
 	for ( int i = 0; i < 10; i++ ) {
@@ -70,6 +74,8 @@ int main( int argc, char * argv[] ) {
 	std::cout << "64 bit NORMAL (mu = 0.5, sigma = 4.5)\n" <<
 				 "-------------------------------------\n";
 
+	delete randNumGen;
+
 	randNumGen = new RandomNumberGenerator( new Marsaglia64( 1 ) );
 
 	for ( int i = 0; i < 10; i++ ) {
@@ -82,6 +88,8 @@ int main( int argc, char * argv[] ) {
 
 	num = randNumGen->uniGen( max, min );
 	std::cout << num << std::endl;
+
+	delete randNumGen;
 
 	return 0;
 }
