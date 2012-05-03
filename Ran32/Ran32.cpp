@@ -32,6 +32,9 @@ w2( 362436069U ) {
 double Ran32::uniGen( double min, \
 					  double max ) {
 	try {
+		if ( u == 0 && v == 0 && w1 == 0 && w2 == 0 )
+			throw std::runtime_error( "u == 0 && v == 0 && w1 == 0 && w2 == 0" );
+
 		checkMinMax( min, max );
 	} catch( std::runtime_error & e ) {
 		throw;

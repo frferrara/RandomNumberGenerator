@@ -26,6 +26,9 @@ w( 1 ) {
 double Ran64::uniGen( double min, \
 					  double max ) {
 	try {
+		if ( u == 0 && v == 0 && w == 0 )
+			throw std::runtime_error( "u == 0 && v == 0 && w == 0" );
+
 		checkMinMax( min, max );
 	} catch ( std::runtime_error & e ) {
 		throw;
